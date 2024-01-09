@@ -10,20 +10,88 @@ select = {
         {
             'Minerais Metálicos':['BRAP3.SA','CBAV3.SA','CMIN3.SA','VALE3.SA'],
             'Siderurgia':['CSNA3.SA','FESA3.SA','GGBR3.SA','GOAU3.SA','USIM3.SA'],
-            'Artefatos de Ferro e Aço':[],
-            'Artefatos de Cobre':[],
-            'Petroquimicos':[],
-            'Fertilizantes e Defensivos':[],
-            'Químicos Diversos':[],
-            'Madeira':[],
-            'Papel e Celulose':[],
-            'Embalagens':[],
-            'Materiais Diversos':[]
-        }
+            'Artefatos de Ferro e Aço':['MGEL3.SA','PATI3.SA','TKNO3.SA'],
+            'Artefatos de Cobre':['PMAM3.SA'],
+            'Petroquimicos':['BRKM3.SA','DEXP3.SA'],
+            'Fertilizantes e Defensivos':['FHER3.SA','NUTR3.SA','VITT3.SA'],
+            'Químicos Diversos':['CRPG3.SA','UNIP3.SA'],
+            'Madeira':['DXCO3.SA','EUCA3.SA'],
+            'Papel e Celulose':['KLBN3.SA','MSPA3.SA','NEMO3.SA',"SUZB3.SA"],
+            'Embalagens':['RANI3.SA'],
+            'Materiais Diversos':['SNSY3.SA']
+        },
 
+    'Bens Industriais':
+        {
+            'Produtos para Construção':['ETER3.SA','HAGA3.SA','PTBL3.SA'],
+            'Construção Pesada':[],
+            'Engenharia Consultiva':[],
+            'Material Aeronáutico e de Defesa':[],
+            'Material Rodoviário':[],
+            'Motores, Compressores e Outros':[],
+            'Máq. e Equip. Industriais':[],
+            'Máq. e Equip. Construção e Agrícolas':[],
+            'Armas e Munições':[],
+            'Linhas Aéreas de Passageiros':[],
+            'Transporte Ferroviário':[],
+            'Transporte Hidroviário':[],
+            'Transporte Rodoviário':[],
+            'Exploração de Rodovias':[],
+            'Serviços de Apoio e Armazenagem':[],
+            'Serviços Diversos':[],
+            'Material de Transporte':[]
+            
+        },
+    'Consumo não Ciclico':
+        {
+            'Agricultura':[],
+            'Açucar e Alcool':[],
+            'Carnes e Derivados':[],
+            'Alimentos Diversos':[],
+            'Cervejas e Refrigerantes':[],
+            'Produtos de Cuidado Pessoal':[],
+            'Produtos de Limpeza':[],
+            'Alimentos':[]
+        },
     
+    'Consumo Cíclico':
+        {
+            'Incorporações':[],
+            'Fios e Tecidos':[],
+            'Vestuário':[],
+            'Calçados':[],
+            'Acessórios':[],
+            'Eletrodomésticos':[],
+            'Móveis':[],
+            'Utensílios Domésticos':[],
+            'Automóveis e Motocicletas':[],
+            'Hotelaria':[],
+        },
     
-    
+    'Saúde':
+        {
+            
+        },
+    'Tecnologia da Informação':
+        {
+            
+        },
+    'Comunicações':
+        {
+            
+        },
+    'Utilidade Pública':
+        {
+           
+        },
+    'Financeiro':
+        {
+            
+        },
+    'Outros':
+        {
+            
+        }
 }
 
 
@@ -44,3 +112,4 @@ def media_balance_sheet(setor,segmento,alvo):
     return np.mean(media)
 
 print(media_balance_sheet('Petróleo, Gás e Biocombustíveis',"Exploração, Refino e Distribuição",'Total Debt'))
+print(media_balance_sheet('Petróleo, Gás e Biocombustíveis',"Exploração, Refino e Distribuição",'Working Capital'))
