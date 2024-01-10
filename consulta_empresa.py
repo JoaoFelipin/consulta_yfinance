@@ -127,6 +127,7 @@ select = {
 
 def media_balance_sheet(setor,segmento,alvo):
     target_tickers = [] 
+    media = []
     ticker_list = select[setor][segmento]
     for tik in ticker_list:
         target_tickers.append(tik)
@@ -134,11 +135,11 @@ def media_balance_sheet(setor,segmento,alvo):
     print(target_tickers)
 
     for i in target_tickers:
-        media = []
+        
         tick = yf.Ticker(i)
         media.append(tick.balance_sheet.loc[alvo].iloc[0])
 #retorna a média para o setor do indicador inserido em alvo
     return np.mean(media)
 
 print(media_balance_sheet('Petróleo, Gás e Biocombustíveis',"Exploração, Refino e Distribuição",'Total Debt'))
-print(media_balance_sheet('Saúde',"Equipamentos",'Working Capital'))
+print(media_balance_sheet('Bens Industriais',"Exploração de Rodovias",'Working Capital'))
