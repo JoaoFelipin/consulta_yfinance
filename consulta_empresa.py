@@ -66,31 +66,60 @@ select = {
             'Utensílios Domésticos':[],
             'Automóveis e Motocicletas':[],
             'Hotelaria':[],
+            'Restaurante e Similares':[],
+            'Bicicletas':[],
+            'Brinquedos e Jogos':[],
+            'Produção de Eventos e Shows':[],
+            'Viagens e Turismo':[],
+            'Atividades Esportivas':[],
+            'Serviços Educacionais':[],
+            'Aluguel de Carros':[],
+            'Programas de Fidelização':[],
+            'Tecidos, Vestuário e Calçados':[],
+            'Produtos Diversos':[]
         },
     
     'Saúde':
         {
-            
+            'Medicamentos e Outros':[],
+            'Serviços Médicos - Hospitalares':[],
+            'Equipamentos':['BALM3.SA']
         },
     'Tecnologia da Informação':
         {
-            
+            'Computadores e Equipamentos':[],
+            'Programas e Serviços':[]
         },
     'Comunicações':
         {
-            
+            'Telecomunicações':[],
+            'Publicidade e Propaganda':[]
         },
     'Utilidade Pública':
         {
-           
+           'Energia Elétrica':[],
+           'Água e Saneamento':[],
+           'Gás':[]
         },
     'Financeiro':
         {
-            
+            'Bancos':[],
+            'Soc. Crédito e Financiamento':[],
+            'Soc. Arrendamento Mercantil':[],
+            'Securitizadoras de Recebíveis':[],
+            'Gestão de Recursos e Investimentos':[],
+            'Serviços Financeiros Diversos':[],
+            'Seguradoras':[],
+            'Resseguradoras':[],
+            'Corretoras de Seguros e Resseguros':[],
+            'Exploração de Imóveis':[],
+            'Intermediação Imobiliária':[],
+            'Holdings Diversificadas':[],
+            'Outros Títulos':[]
         },
     'Outros':
         {
-            
+            'Outros':[]
         }
 }
 
@@ -112,4 +141,4 @@ def media_balance_sheet(setor,segmento,alvo):
     return np.mean(media)
 
 print(media_balance_sheet('Petróleo, Gás e Biocombustíveis',"Exploração, Refino e Distribuição",'Total Debt'))
-print(media_balance_sheet('Petróleo, Gás e Biocombustíveis',"Exploração, Refino e Distribuição",'Working Capital'))
+print(media_balance_sheet('Saúde',"Equipamentos",'Working Capital'))
