@@ -139,7 +139,7 @@ def media_balance_sheet(setor,segmento,alvo):
         tick = yf.Ticker(i)
         media.append(tick.balance_sheet.loc[alvo].iloc[0])
 #retorna a média para o setor do indicador inserido em alvo
-    return np.mean(media)
+    return round(np.mean(media),2)
 
 print(media_balance_sheet('Petróleo, Gás e Biocombustíveis',"Exploração, Refino e Distribuição",'Total Debt'))
 print(media_balance_sheet('Bens Industriais',"Exploração de Rodovias",'Working Capital'))
