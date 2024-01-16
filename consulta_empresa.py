@@ -141,5 +141,5 @@ def media_balance_sheet(setor,segmento,alvo):
 #retorna a média para o setor do indicador inserido em alvo
     return round(np.mean(media),2)
 
-print(media_balance_sheet('Petróleo, Gás e Biocombustíveis',"Exploração, Refino e Distribuição",'Total Debt'))
-print(media_balance_sheet('Bens Industriais',"Exploração de Rodovias",'Working Capital'))
+print(media_balance_sheet('Comunicações',"Telecomunicações",'Total Debt'))
+print(media_balance_sheet('Comunicações',"Telecomunicações",'Working Capital'))
