@@ -181,10 +181,9 @@ def print_medias_segmento(setor,segmento):
         try:
             print(i)
             print(media_balance_sheet(setor, segmento, i))
-        except Exception as e:
+        except: 
             print(f"não encontramos {i}")
             continue
-
 
 print_medias_segmento('Comunicações',"Telecomunicações")
 #print(media_balance_sheet('Comunicações',"Telecomunicações",'Total Debt'))
