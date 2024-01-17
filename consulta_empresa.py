@@ -141,5 +141,45 @@ def media_balance_sheet(setor,segmento,alvo):
 #retorna a média para o setor do indicador inserido em alvo
     return round(np.mean(media),2)
 
+indicadores = ['Ordinary Shares Number', 'Share Issued', 'Total Debt',
+       'Tangible Book Value', 'Invested Capital', 'Working Capital',
+       'Net Tangible Assets', 'Capital Lease Obligations',
+       'Common Stock Equity', 'Total Capitalization',
+       'Total Equity Gross Minority Interest', 'Minority Interest',
+       'Stockholders Equity', 'Gains Losses Not Affecting Retained Earnings',
+       'Other Equity Adjustments', 'Retained Earnings',
+       'Additional Paid In Capital', 'Capital Stock', 'Common Stock',
+       'Preferred Stock', 'Total Liabilities Net Minority Interest',
+       'Total Non Current Liabilities Net Minority Interest',
+       'Other Non Current Liabilities',
+       'Preferred Securities Outside Stock Equity',
+       'Non Current Accrued Expenses', 'Non Current Deferred Liabilities',
+       'Non Current Deferred Revenue',
+       'Non Current Deferred Taxes Liabilities',
+       'Long Term Debt And Capital Lease Obligation',
+       'Long Term Capital Lease Obligation', 'Long Term Debt',
+       'Long Term Provisions', 'Current Liabilities',
+       'Other Current Liabilities', 'Current Deferred Liabilities',
+       'Current Deferred Revenue', 'Current Debt And Capital Lease Obligation',
+       'Current Capital Lease Obligation', 'Current Debt',
+       'Other Current Borrowings', 'Current Provisions',
+       'Payables And Accrued Expenses', 'Current Accrued Expenses',
+       'Interest Payable', 'Payables', 'Total Tax Payable', 'Accounts Payable',
+       'Total Assets', 'Total Non Current Assets', 'Other Non Current Assets',
+       'Goodwill And Other Intangible Assets', 'Other Intangible Assets',
+       'Goodwill', 'Net PPE', 'Accumulated Depreciation', 'Gross PPE',
+       'Leases', 'Construction In Progress', 'Other Properties',
+       'Machinery Furniture Equipment', 'Land And Improvements', 'Properties',
+       'Current Assets', 'Other Current Assets', 'Prepaid Assets', 'Inventory',
+       'Other Inventories', 'Finished Goods', 'Work In Process',
+       'Raw Materials', 'Receivables', 'Accounts Receivable',
+       'Cash Cash Equivalents And Short Term Investments',
+       'Other Short Term Investments', 'Cash And Cash Equivalents']
+
+for i in indicadores:
+    print('teste')
+
+
+
 print(media_balance_sheet('Comunicações',"Telecomunicações",'Total Debt'))
 print(media_balance_sheet('Comunicações',"Telecomunicações",'Working Capital'))
