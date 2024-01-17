@@ -132,7 +132,7 @@ def media_balance_sheet(setor,segmento,alvo):
     for tik in ticker_list:
         target_tickers.append(tik)
 
-    print(target_tickers)
+    #print(target_tickers)
 
     for i in target_tickers:
         
@@ -177,9 +177,14 @@ indicadores = ['Ordinary Shares Number', 'Share Issued', 'Total Debt',
        'Other Short Term Investments', 'Cash And Cash Equivalents']
 
 for i in indicadores:
-    print('teste')
+    try:
+        print(media_balance_sheet('Comunicações', "Telecomunicações", i))
+        print(i)
+    except Exception as e:
+        print(f"não encontramos {i}")
+        continue
 
 
 
-print(media_balance_sheet('Comunicações',"Telecomunicações",'Total Debt'))
-print(media_balance_sheet('Comunicações',"Telecomunicações",'Working Capital'))
+#print(media_balance_sheet('Comunicações',"Telecomunicações",'Total Debt'))
+#print(media_balance_sheet('Comunicações',"Telecomunicações",'Working Capital'))
