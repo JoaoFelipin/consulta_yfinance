@@ -176,15 +176,16 @@ indicadores = ['Ordinary Shares Number', 'Share Issued', 'Total Debt',
        'Cash Cash Equivalents And Short Term Investments',
        'Other Short Term Investments', 'Cash And Cash Equivalents']
 
-for i in indicadores:
-    try:
-        print(media_balance_sheet('Comunicações', "Telecomunicações", i))
-        print(i)
-    except Exception as e:
-        print(f"não encontramos {i}")
-        continue
+def print_medias_segmento(setor,segmento):
+    for i in indicadores:
+        try:
+            print(i)
+            print(media_balance_sheet(setor, segmento, i))
+        except Exception as e:
+            print(f"não encontramos {i}")
+            continue
 
 
-
+print_medias_segmento('Comunicações',"Telecomunicações")
 #print(media_balance_sheet('Comunicações',"Telecomunicações",'Total Debt'))
 #print(media_balance_sheet('Comunicações',"Telecomunicações",'Working Capital'))
