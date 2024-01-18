@@ -112,7 +112,7 @@ select = {
             'Seguradoras':['BBSE3.SA','BRGE3.SA','CSAB3.SA','CXSE3.SA','PSSA3.SA'],
             'Resseguradoras':['IRBR3.SA'],
             'Corretoras de Seguros e Resseguros':['APER3.SA','WIZC3.SA'],
-            'Exploração de Imóveis':[],
+            'Exploração de Imóveis':["MULT3.SA", "SCAR3.SA", "ALOS3.SA", "BRPR3.SA", "AVLL3.SA", "HBTS5.SA", "EMCC3.SA", "IGTI3.SA", "SYNE3.SA", "NEXP3.SA", "GSHP3.SA", "LOGG3.SA", "IGBR3.SA"],
             'Intermediação Imobiliária':['LPSB3.SA','NEXP3.SA'],
             'Holdings Diversificadas':['ITSA3.SA','MOAR3.SA','SIMH3.SA'],
             'Outros Títulos':[]
