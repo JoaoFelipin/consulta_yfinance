@@ -142,7 +142,7 @@ def media_balance_sheet(setor,segmento,alvo):
 #retorna a média para o setor do indicador inserido em alvo
     return round(np.mean(media),2)
 
-indicadores = ['Ordinary Shares Number', 'Share Issued', 'Total Debt',
+indicadores_balance = ['Ordinary Shares Number', 'Share Issued', 'Total Debt',
        'Tangible Book Value', 'Invested Capital', 'Working Capital',
        'Net Tangible Assets', 'Capital Lease Obligations',
        'Common Stock Equity', 'Total Capitalization',
@@ -177,15 +177,38 @@ indicadores = ['Ordinary Shares Number', 'Share Issued', 'Total Debt',
        'Cash Cash Equivalents And Short Term Investments',
        'Other Short Term Investments', 'Cash And Cash Equivalents']
 
+indicadores_dre = ['Tax Effect Of Unusual Items', 'Tax Rate For Calcs',
+       'Normalized EBITDA', 'Total Unusual Items',
+       'Total Unusual Items Excluding Goodwill',
+       'Net Income From Continuing Operation Net Minority Interest',
+       'Reconciled Depreciation', 'Reconciled Cost Of Revenue', 'EBITDA',
+       'EBIT', 'Net Interest Income', 'Interest Expense', 'Interest Income',
+       'Normalized Income',
+       'Net Income From Continuing And Discontinued Operation',
+       'Total Expenses', 'Total Operating Income As Reported',
+       'Diluted Average Shares', 'Basic Average Shares', 'Diluted EPS',
+       'Basic EPS', 'Diluted NI Availto Com Stockholders',
+       'Net Income Common Stockholders', 'Net Income',
+       'Net Income Including Noncontrolling Interests',
+       'Net Income Continuous Operations', 'Tax Provision', 'Pretax Income',
+       'Other Income Expense', 'Other Non Operating Income Expenses',
+       'Special Income Charges', 'Write Off', 'Gain On Sale Of Security',
+       'Net Non Operating Interest Income Expense',
+       'Interest Expense Non Operating', 'Interest Income Non Operating',
+       'Operating Income', 'Operating Expense', 'Research And Development',
+       'Selling General And Administration', 'Selling And Marketing Expense',
+       'General And Administrative Expense', 'Other Gand A', 'Gross Profit',
+       'Cost Of Revenue', 'Total Revenue', 'Operating Revenue']
+
 def print_medias_segmento(setor,segmento):  
     resultados = {}
-    for i in indicadores:
+    for i in indicadores_balance:
         try:
             #print(i)
             #print(media_balance_sheet(setor, segmento, i))
             resultados[i]=[media_balance_sheet(setor, segmento, i)]   
         except: 
-            resultados[i] = 0
+            resultados[i] =[0]
             continue
     return resultados
 
