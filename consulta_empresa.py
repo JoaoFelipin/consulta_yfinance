@@ -185,13 +185,14 @@ def print_medias_segmento(setor,segmento):
             #print(media_balance_sheet(setor, segmento, i))
             resultados[i]=[media_balance_sheet(setor, segmento, i)]   
         except: 
-            #print(f"não encontramos {i}")
+            resultados[i] = 0
             continue
     return resultados
+
+
 
 dict = print_medias_segmento('Comunicações',"Telecomunicações")
 df = pd.DataFrame(dict)
 print(df.head())
 df.to_excel('teste.xlsx')
-#print(media_balance_sheet('Comunicações',"Telecomunicações",'Total Debt'))
-#print(media_balance_sheet('Comunicações',"Telecomunicações",'Working Capital'))
+
