@@ -1,5 +1,6 @@
 import yfinance as yf
 import numpy as np 
+import pandas as pd 
 
 select = {
     'Petróleo, Gás e Biocombustíveis':
@@ -182,12 +183,15 @@ def print_medias_segmento(setor,segmento):
         try:
             #print(i)
             #print(media_balance_sheet(setor, segmento, i))
-            resultados[i]=media_balance_sheet(setor, segmento, i)   
+            resultados[i]=[media_balance_sheet(setor, segmento, i)]   
         except: 
             #print(f"não encontramos {i}")
             continue
     return resultados
 
-print(print_medias_segmento('Comunicações',"Telecomunicações"))
+dict = print_medias_segmento('Comunicações',"Telecomunicações")
+df = pd.DataFrame(dict)
+print(df.head())
+df.to_excel('teste.xlsx')
 #print(media_balance_sheet('Comunicações',"Telecomunicações",'Total Debt'))
 #print(media_balance_sheet('Comunicações',"Telecomunicações",'Working Capital'))
