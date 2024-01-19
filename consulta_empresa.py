@@ -142,6 +142,22 @@ def media_balance_sheet(setor,segmento,alvo):
 #retorna a média para o setor do indicador inserido em alvo
     return round(np.mean(media),2)
 
+def media_income_statement(setor,segmento,alvo):
+    target_tickers = [] 
+    media = []
+    ticker_list = select[setor][segmento]
+    for tik in ticker_list:
+        target_tickers.append(tik)
+
+    #print(target_tickers)
+
+    for i in target_tickers:
+        
+        tick = yf.Ticker(i)
+        media.append(tick.income_stmt.loc[alvo].iloc[0])
+#retorna a média para o setor do indicador inserido em alvo
+    return round(np.mean(media),2)
+
 indicadores_balance = ['Ordinary Shares Number', 'Share Issued', 'Total Debt',
        'Tangible Book Value', 'Invested Capital', 'Working Capital',
        'Net Tangible Assets', 'Capital Lease Obligations',
@@ -200,7 +216,7 @@ indicadores_dre = ['Tax Effect Of Unusual Items', 'Tax Rate For Calcs',
        'General And Administrative Expense', 'Other Gand A', 'Gross Profit',
        'Cost Of Revenue', 'Total Revenue', 'Operating Revenue']
 
-def print_medias_segmento(setor,segmento):  
+def print_medias_segmento_balance(setor,segmento):  
     resultados = {}
     for i in indicadores_balance:
         try:
@@ -212,10 +228,23 @@ def print_medias_segmento(setor,segmento):
             continue
     return resultados
 
+def print_medias_segmento_dre(setor,segmento):  
+    resultados = {}
+    for i in indicadores_dre:
+        try:
+            #print(i)
+            #print(media_balance_sheet(setor, segmento, i))
+            resultados[i]=[media_income_statement(setor, segmento, i)]   
+        except: 
+            resultados[i] =[0]
+            continue
+    return resultados
 
-
-dict = print_medias_segmento('Comunicações',"Telecomunicações")
+dict = print_medias_segmento_balance('Comunicações',"Telecomunicações")
 df = pd.DataFrame(dict)
 print(df.head())
-df.to_excel('teste.xlsx')
+dict = print_medias_segmento_dre('Comunicações',"Telecomunicações")
+df = pd.DataFrame(dict)
+print(df.head())
+#df.to_excel('teste.xlsx')
 
