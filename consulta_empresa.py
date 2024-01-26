@@ -240,10 +240,10 @@ def print_medias_segmento_dre(setor,segmento):
             continue
     return resultados
 
-dict = print_medias_segmento_balance('Materiais Básicos',"Minerais Metálicos")
+dict = print_medias_segmento_balance('Financeiro',"Bancos")
 df = pd.DataFrame(dict)
 print(df.head())
-dict = print_medias_segmento_dre('Materiais Básicos',"Minerais Metálicos")
+dict = print_medias_segmento_dre('Financeiro',"Bancos")
 df = pd.DataFrame(dict)
 print(df.head())
 #df.to_excel('teste.xlsx')
